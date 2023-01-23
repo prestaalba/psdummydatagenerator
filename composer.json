@@ -1,0 +1,27 @@
+{
+  "name": "prestaalba/psdummydatagenerator",
+  "description": "PrestaShop dummy data generator for testing",
+  "license": "AFL-3.0",
+  "authors": [
+    {
+      "name": "Experto PrestaShop"
+    },
+    {
+      "name": "PrestaAlba"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ExpertoPrestashop\\Module\\PsDummyDataGenerator\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.1.0",
+    "fakerphp/faker": "^1.20"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "prepend-autoloader": false
+  },
+  "type": "prestashop-module"
+}

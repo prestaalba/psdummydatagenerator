@@ -1,0 +1,111 @@
+{#**
+  * Copyright since 2007 PrestaShop SA and Contributors
+  * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
+  *
+  * NOTICE OF LICENSE
+  *
+  * This source file is subject to the Academic Free License 3.0 (AFL-3.0)
+  * that is bundled with this package in the file LICENSE.md.
+  * It is also available through the world-wide-web at this URL:
+  * https://opensource.org/licenses/AFL-3.0
+  * If you did not receive a copy of the license and are unable to
+  * obtain it through the world-wide-web, please send an email
+  * to license@prestashop.com so we can send you a copy immediately.
+  *
+  * @author    PrestaShop SA <contact@prestashop.com>
+  * @copyright Since 2007 PrestaShop SA and Contributors
+  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
+  *#}
+{% extends '@PrestaShop/Admin/layout.html.twig' %}
+
+{# PrestaShop made some modifications to the way forms are displayed to work well with PrestaShop in order to benefit from those you need to use ui kit as theme#}
+{% form_theme dummydataConfigurationForm '@PrestaShop/Admin/TwigTemplateForm/prestashop_ui_kit.html.twig' %}
+
+{% block content %}
+  {% embed 'PrestaShopBundle:Admin/Helpers:bootstrap_popup.html.twig' with {
+    'id': 'import_progress_modal',
+    'title': 'Generating data...'|trans({}, 'Modules.PsDummyDataGenerator.Admin'),
+    'closable': false,
+    'progressbar': {
+      id: 'import_progress_bar',
+      label: 'Validating data...'|trans({}, 'Modules.PsDummyDataGenerator.Admin')
+    },
+    'actions': [
+      {
+        'type': 'button',
+        'label': 'Ignore warnings and continue?'|trans,
+        'class': 'btn btn-outline-warning btn-lg js-continue-import',
+      },
+      {
+        'type': 'button',
+        'label': 'Abort generation'|trans,
+        'class': 'btn btn-outline-danger btn-lg js-abort-import',
+      },
+      {
+        'type': 'button',
+        'label': 'Close'|trans({}, 'Modules.PsDummyDataGenerator.Admin'),
+        'class': 'btn btn-outline-secondary btn-lg js-close-modal',
+      }
+    ],
+  } %}
+    {% block content %}
+      <div class="modal-body"
+          data-importing-label="{{ 'Generating data...'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}"
+          data-imported-label="{{ 'Data generated!'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}"
+      >
+        <div class="alert alert-success js-import-success d-none" role="alert">
+          <span class="alert-text">
+            {{ 'Data generated!'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+            {{ "Look at your listings to make sure it's all there as you wished."|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+          </span>
+        </div>
+        <div class="alert alert-warning js-post-limit-warning d-none" role="alert">
+          <div class="alert-text">
+            {{ "Warning, the current generation may require a PHP setting update, to allow more time to proccess data. If the current import stops before the end, you should increase your PHP \"time_limit\" setting, and try again."|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+          </div>
+        </div>
+        <div class="alert alert-warning js-import-warnings d-none" role="alert">
+          <span class="alert-text">
+            {{ 'Some errors were detected. Please check the details:'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+          </span>
+        </div>
+        <div class="alert alert-danger js-import-errors d-none" role="alert">
+          <span class="alert-text">
+            {{ 'Errors occurred:'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+          </span>
+        </div>
+        <div class="alert alert-info js-import-info d-none" role="alert">
+          <span class="alert-text">
+            {{ 'We made the following adjustments:'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+          </span>
+        </div>
+      </div>
+    {% endblock %}
+  {% endembed %}
+
+{{ form_start(dummydataConfigurationForm) }}
+  <div class="card">
+    <h3 class="card-header">
+      <i class="material-icons">settings</i> {{ 'Configuration'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+    </h3>
+    <div class="card-body">
+      <div class="form-wrapper">
+        {{ form_widget(dummydataConfigurationForm) }}
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-primary float-right js-process-import js-import-process-button" id="generate-button" data-import_url="{{ path('psdummydatagenerator_generate_data') }}">
+          {{ 'Generate'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+        </button>
+      </div>
+    </div>
+  </div>
+  {{ form_end(dummydataConfigurationForm) }}
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+  <script src="{{ asset('../modules/psdummydatagenerator/views/js/import.js') }}"></script>
+  <script src="{{ asset('../modules/psdummydatagenerator/views/js/import_data.bundle.js') }}"></script>
+{% endblock %}
