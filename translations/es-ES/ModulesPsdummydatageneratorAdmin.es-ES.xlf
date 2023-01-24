@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="admin123" source-language="es-ES" target-language="es-ES" datatype="plaintext">
+    <body>
+      <trans-unit id="edc3878aed8dc9ffef4cc10f2dea44bf">
+        <source>PrestaShop dummy data generator</source>
+        <target>Generador de datos ficticios en PrestaShop</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="be57261d285bc41b2e43812d89987704">
+        <source>PrestaShop dummy data generator for testing.</source>
+        <target>Generador de datos ficticios para pruebas en PrestaShop.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="1a434befae3f49ae09347ded52032f6f">
+        <source>Entity</source>
+        <target>Entidad</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="c32516babc5b6c47eb8ce1bfc223253c">
+        <source>Catalog</source>
+        <target>Catálogo</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="3adbdb3ac060038aa0e6e6c138ef9873">
+        <source>Category</source>
+        <target>Categoría</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="c0bd7654d5b278e65f21cf4e9153fdb4">
+        <source>Manufacturer</source>
+        <target>Fabricante</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="deb10517653c255364175796ace3553f">
+        <source>Product</source>
+        <target>Producto</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="59912c1acae2a3ba8ee8e93b5c59c9ae">
+        <source>Images by product</source>
+        <target>Imágenes por producto</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="86561af492a262d355543867b565e736">
+        <source>Combination by product</source>
+        <target>Combinaciones por producto</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="11ff9f68afb6b8b5b8eda218d7c83a65">
+        <source>Sales</source>
+        <target>Ventas</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="ce26601dac0dea138b7295f02b7620a7">
+        <source>Customer</source>
+        <target>Cliente</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="0387c1e74cee8c66a53836a665027ca0">
+        <source>Addresses by customer</source>
+        <target>Direcciones por cliente</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="1631b8f43aaf6b87d82bcd3f6c0fb17a">
+        <source>Order by customer</source>
+        <target>Pedidos por cliente</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="694e8d1f2ee056f98ee488bdc4982d73">
+        <source>Quantity</source>
+        <target>Cantidad</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="e273af234398c6a79f3c2945731f8761">
+        <source>Number of units to be generated from the selected entity.</source>
+        <target>Número de unidades a ser generadas de la entidad seleccionada.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="0fffff1aeb5260e3ac9782094c837e8e">
+        <source>Generating data...</source>
+        <target>Generando datos...</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="6dedb4e9a749c33aa7f21d128a994a61">
+        <source>Data generated!</source>
+        <target>¡Datos generados!</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="118f9dbc8442c6be19dfc0b70d965929">
+        <source>Look at your listings to make sure it's all there as you wished.</source>
+        <target>Mire sus listados para asegurarse de que todo está como lo deseaba.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="154609aaefca46ff5743001924d0f14f">
+        <source>Warning, the current generation may require a PHP setting update, to allow more time to proccess data. If the current import stops before the end, you should increase your PHP "time_limit" setting, and try again.</source>
+        <target>Advertencia, la generación actual puede requerir una actualización de la configuración de PHP, para permitir más tiempo para procesar datos. Si la importación actual se detiene antes de finalizar, debe aumentar su configuración PHP "time_limit" y volver a intentarlo.</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="841e4579e55a01ab8f0c565995ba7cfc">
+        <source>Some errors were detected. Please check the details:</source>
+        <target>Se detectaron algunos errores. Por favor, compruebe los detalles:</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="4959a069997257077022c1b96b3b8001">
+        <source>Errors occurred:</source>
+        <target>Errores ocurridos:</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="3df311b82f78fa4059e9a78a26e77b06">
+        <source>We made the following adjustments:</source>
+        <target>Se hicieron los siguientes ajustes:</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="6e17621d481059924339f91ed431a116">
+        <source>Validating data...</source>
+        <target>Validando datos...</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="d3d2e617335f08df83599665eef8a418">
+        <source>Close</source>
+        <target>Cerrar</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="254f642527b45bc260048e30704edb39">
+        <source>Configuration</source>
+        <target>Configuración</target>
+        <note>Line: </note>
+      </trans-unit>
+      <trans-unit id="32b919d18cfaca89383f6000dcc9c031">
+        <source>Generate</source>
+        <target>Generar</target>
+        <note>Line: </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

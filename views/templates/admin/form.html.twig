@@ -30,11 +30,11 @@
 {% block content %}
   {% embed popup_template with {
     'id': 'import_progress_modal',
-    'title': 'Generating data...'|trans({}, 'Modules.PsDummyDataGenerator.Admin'),
+    'title': 'Generating data...'|trans({}, 'Modules.Psdummydatagenerator.Admin'),
     'closable': false,
     'progressbar': {
       id: 'import_progress_bar',
-      label: 'Validating data...'|trans({}, 'Modules.PsDummyDataGenerator.Admin')
+      label: 'Validating data...'|trans({}, 'Modules.Psdummydatagenerator.Admin')
     },
     'actions': [
       {
@@ -49,40 +49,40 @@
       },
       {
         'type': 'button',
-        'label': 'Close'|trans({}, 'Modules.PsDummyDataGenerator.Admin'),
+        'label': 'Close'|trans({}, 'Modules.Psdummydatagenerator.Admin'),
         'class': 'btn btn-outline-secondary btn-lg js-close-modal',
       }
     ],
   } %}
     {% block content %}
       <div class="modal-body"
-          data-importing-label="{{ 'Generating data...'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}"
-          data-imported-label="{{ 'Data generated!'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}"
+          data-importing-label="{{ 'Generating data...'|trans({}, 'Modules.Psdummydatagenerator.Admin') }}"
+          data-imported-label="{{ 'Data generated!'|trans({}, 'Modules.Psdummydatagenerator.Admin') }}"
       >
         <div class="alert alert-success js-import-success d-none" role="alert">
           <span class="alert-text">
-            {{ 'Data generated!'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
-            {{ "Look at your listings to make sure it's all there as you wished."|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+            {{ 'Data generated!'|trans({}, 'Modules.Psdummydatagenerator.Admin') }}
+            {{ "Look at your listings to make sure it's all there as you wished."|trans({}, 'Modules.Psdummydatagenerator.Admin') }}
           </span>
         </div>
         <div class="alert alert-warning js-post-limit-warning d-none" role="alert">
           <div class="alert-text">
-            {{ "Warning, the current generation may require a PHP setting update, to allow more time to proccess data. If the current import stops before the end, you should increase your PHP \"time_limit\" setting, and try again."|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+            {{ "Warning, the current generation may require a PHP setting update, to allow more time to proccess data. If the current import stops before the end, you should increase your PHP \"time_limit\" setting, and try again."|trans({}, 'Modules.Psdummydatagenerator.Admin') }}
           </div>
         </div>
         <div class="alert alert-warning js-import-warnings d-none" role="alert">
           <span class="alert-text">
-            {{ 'Some errors were detected. Please check the details:'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+            {{ 'Some errors were detected. Please check the details:'|trans({}, 'Modules.Psdummydatagenerator.Admin') }}
           </span>
         </div>
         <div class="alert alert-danger js-import-errors d-none" role="alert">
           <span class="alert-text">
-            {{ 'Errors occurred:'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+            {{ 'Errors occurred:'|trans({}, 'Modules.Psdummydatagenerator.Admin') }}
           </span>
         </div>
         <div class="alert alert-info js-import-info d-none" role="alert">
           <span class="alert-text">
-            {{ 'We made the following adjustments:'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+            {{ 'We made the following adjustments:'|trans({}, 'Modules.Psdummydatagenerator.Admin') }}
           </span>
         </div>
       </div>
@@ -92,7 +92,7 @@
 {{ form_start(dummydataConfigurationForm) }}
   <div class="card">
     <h3 class="card-header">
-      <i class="material-icons">settings</i> {{ 'Configuration'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+      <i class="material-icons">settings</i> {{ 'Configuration'|trans({}, 'Modules.Psdummydatagenerator.Admin') }}
     </h3>
     <div class="card-body">
       <div class="form-wrapper">
@@ -102,7 +102,7 @@
     <div class="card-footer">
       <div class="d-flex justify-content-end">
         <button class="btn btn-primary float-right js-process-import js-import-process-button" id="generate-button" data-import_url="{{ path('psdummydatagenerator_generate_data') }}">
-          {{ 'Generate'|trans({}, 'Modules.PsDummyDataGenerator.Admin') }}
+          {{ 'Generate'|trans({}, 'Modules.Psdummydatagenerator.Admin') }}
         </button>
       </div>
     </div>

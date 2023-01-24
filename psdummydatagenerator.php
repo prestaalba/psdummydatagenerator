@@ -27,11 +27,11 @@ class PsDummyDataGenerator extends Module
         $this->bootstrap = true;
         parent::__construct();
 
-        $this->displayName = $this->trans('PrestaShop dummy data generator', [], 'Modules.PsDummyDataGenerator.Admin');
+        $this->displayName = $this->trans('PrestaShop dummy data generator', [], 'Modules.Psdummydatagenerator.Admin');
         $this->description = $this->trans(
             'PrestaShop dummy data generator for testing.',
             [],
-            'Modules.PsDummyDataGenerator.Admin'
+            'Modules.Psdummydatagenerator.Admin'
         );
 
         $this->ps_versions_compliancy = ['min' => '1.7.8', 'max' => _PS_VERSION_];

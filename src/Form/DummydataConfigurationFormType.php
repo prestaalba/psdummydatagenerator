@@ -32,28 +32,27 @@ class DummydataConfigurationFormType extends TranslatorAwareType
                 'entity_choice',
                 ChoiceType::class,
                 [
-                    'label' => $this->trans('Entity', 'Modules.PsDummyDataGenerator.Admin'),
+                    'label' => $this->trans('Entity', 'Modules.Psdummydatagenerator.Admin'),
                     'required' => true,
-                    'choice_translation_domain' => 'Modules.PsDummyDataGenerator.Admin',
                     'choices' => [
-                        'Catalog' => [
-                            'Category' => 'category',
-                            'Manufacturer' => 'manufacturer',
-                            'Product' => 'product',
-                            'Images by product' => 'image',
-                            'Combination by product' => 'combination',
+                        $this->trans('Catalog', 'Modules.Psdummydatagenerator.Admin') => [
+                            $this->trans('Category', 'Modules.Psdummydatagenerator.Admin') => 'category',
+                            $this->trans('Manufacturer', 'Modules.Psdummydatagenerator.Admin') => 'manufacturer',
+                            $this->trans('Product', 'Modules.Psdummydatagenerator.Admin') => 'product',
+                            $this->trans('Images by product', 'Modules.Psdummydatagenerator.Admin') => 'image',
+                            $this->trans('Combination by product', 'Modules.Psdummydatagenerator.Admin') => 'combination',
                         ],
-                        'Sales' => [
-                            'Customer' => 'customer',
-                            'Addresses by customer' => 'address',
-                            'Order by customer' => 'order',
+                        $this->trans('Sales', 'Modules.Psdummydatagenerator.Admin') => [
+                            $this->trans('Customer', 'Modules.Psdummydatagenerator.Admin') => 'customer',
+                            $this->trans('Addresses by customer', 'Modules.Psdummydatagenerator.Admin') => 'address',
+                            $this->trans('Order by customer', 'Modules.Psdummydatagenerator.Admin') => 'order',
                         ],
                     ],
                 ]
             )
             ->add('entity_quantity', IntegerType::class, [
-                'label' => $this->trans('Quantity', 'Modules.PsDummyDataGenerator.Admin'),
-                'help' => 'Number of units to be generated from the selected entity.',
+                'label' => $this->trans('Quantity', 'Modules.Psdummydatagenerator.Admin'),
+                'help' => $this->trans('Number of units to be generated from the selected entity.', 'Modules.Psdummydatagenerator.Admin'),
             ]);
     }
 }
