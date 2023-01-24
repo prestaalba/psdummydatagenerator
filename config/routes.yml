@@ -1,6 +1,6 @@
 psdummydatagenerator_configuration_form:
   path: /psdummydatagenerator/configuration
-  methods: [GET, POST]
+  methods: [GET]
   defaults:
     _controller: 'ExpertoPrestashop\Module\PsDummyDataGenerator\Controller\DummydataConfigurationController::index'
     # Needed to work with tab system

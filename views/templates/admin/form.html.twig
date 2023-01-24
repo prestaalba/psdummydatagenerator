@@ -21,8 +21,14 @@
 {# PrestaShop made some modifications to the way forms are displayed to work well with PrestaShop in order to benefit from those you need to use ui kit as theme#}
 {% form_theme dummydataConfigurationForm '@PrestaShop/Admin/TwigTemplateForm/prestashop_ui_kit.html.twig' %}
 
+{% if ps_version_8 %}
+  {% set popup_template = '@PrestaShop/Admin/Helpers/bootstrap_popup.html.twig' %}
+{% else %}
+  {% set popup_template = 'PrestaShopBundle:Admin/Helpers:bootstrap_popup.html.twig' %}
+{% endif %}
+
 {% block content %}
-  {% embed 'PrestaShopBundle:Admin/Helpers:bootstrap_popup.html.twig' with {
+  {% embed popup_template with {
     'id': 'import_progress_modal',
     'title': 'Generating data...'|trans({}, 'Modules.PsDummyDataGenerator.Admin'),
     'closable': false,

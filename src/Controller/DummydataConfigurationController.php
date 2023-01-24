@@ -28,6 +28,7 @@ class DummydataConfigurationController extends FrameworkBundleAdminController
         $form = $formDataHandler->getForm();
 
         return $this->render('@Modules/psdummydatagenerator/views/templates/admin/form.html.twig', [
+            'ps_version_8' => version_compare(_PS_VERSION_, '8.0.0', '>='),
             'dummydataConfigurationForm' => $form->createView(),
         ]);
     }
